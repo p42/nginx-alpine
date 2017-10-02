@@ -33,5 +33,13 @@ Projects are using automated build/test/deploy pipelines availabe in GitLab. Thi
     1. Create a folder/folders in the ci_tests directory which will contain your test scripts. Please make sure these are executable files.
     1. Write your tests using good testing conventions (singular, good debugging output, etc).
     1. When deploying, you can run either all tests or just your local tests by supplying arguments to the docker run --rm ... command in the test stage of the .gitlab-ci.yml file. No arguments will run all tests including upstream.
+* Available Runners
+    * Multiple runners are available and can be specified or selected using the tags in .gitlab-ci.yml. Available tags are:
+    * - docker
+    * - ovirt
+    * - ubuntu
+    * - openstack
+    * - coreos
+    * - default
 
 ## Docker Conventions
