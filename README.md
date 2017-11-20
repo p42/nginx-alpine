@@ -25,7 +25,7 @@
 
 ## CI/CD
 
-Projects are using automated build/test/deploy pipelines availabe in GitLab. This strategy requires that you enable CI/CD on your GitLab project.
+Projects are using automated build/test/deploy pipelines availabe in GitLab. This strategy requires that you enable CI/CD on your GitLab project. **To enable pipelines, rename .gitlab-ci.yml.default to .gitlab-ci.yml.**
 
 ### Writing/Configuring Tests
 
