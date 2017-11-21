@@ -1,11 +1,11 @@
 stages:
   - build
-  - test
+#  - test
   - deploy
 
 variables:
-  IMAGE_NAME: "{Your Image Name Here}"
-  GITHUB_PROJECT: "{Your project's relative path here}" - e.g p42/syslog-centos-docker.git
+  IMAGE_NAME: "p42/nginx-alpine"
+  GITHUB_PROJECT: "p42/nginx-alpine.git"
 
 before_script:
   - docker info
@@ -26,19 +26,19 @@ build:
   except:
     - master
 
-test-master:
-  stage: test
-  script:
-    - docker run --rm "${IMAGE_NAME}:latest" /ci_tests/run_tests system
-  only:
-    - master
+# test-master:
+#   stage: test
+#   script:
+#     - docker run --rm "${IMAGE_NAME}:latest" /ci_tests/run_tests system
+#   only:
+#     - master
 
-test:
-  stage: test
-  script:
-    - docker run --rm "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}" /ci_tests/run_tests system
-  except:
-    - master
+# test:
+#   stage: test
+#   script:
+#     - docker run --rm "${IMAGE_NAME}:${CI_COMMIT_REF_NAME}" /ci_tests/run_tests system
+#   except:
+#     - master
 
 deploy_to_github-master:
   stage: deploy

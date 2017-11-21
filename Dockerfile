@@ -1,8 +1,9 @@
 #Install and configure [] 
 
-FROM 
-MAINTAINER
+FROM nginx:alpine
+MAINTAINER Brandon Cone bcone@esu10.org
 
 COPY container_files /
 
-RUN 
+RUN apk update && \
+apk add apache2-utils
