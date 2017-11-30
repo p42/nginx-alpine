@@ -1,6 +1,6 @@
 #Install and configure [] 
 
-FROM project42/nginx-shiboleth
+FROM project42/s6-nginx-shibboleth
 MAINTAINER Brandon Cone bcone@esu10.org
 
 
