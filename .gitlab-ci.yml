@@ -5,7 +5,7 @@ stages:
 
 variables:
   IMAGE_NAME: "p42/nginx-alpine"
-  GITHUB_PROJECT: "p42/nginx-alpine.git"
+  GITHUB_PROJECT: "p42/nginx-loggingui-alpine.git"
 
 before_script:
   - docker info
